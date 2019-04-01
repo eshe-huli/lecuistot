@@ -1,0 +1,466 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+   <body class="home page-template page-template-page-full-width page-template-page-full-width-php page page-id-41 woocommerce-no-js no-sidebar">
+      <header class="header-container transparent-header sticky-tr">
+{% endblock %}
+{% block body %}   
+   <section id="slider"  class="img-slider">
+      <div class="item" style="background-image: url({{asset ('images/slide-1.jpg')}})"></div>
+      <div class="item" style="background-image: url({{asset ('images/slide-2.jpg')}})"></div>
+      <div class="info color-tr dynamic-shadow">
+         <h1 class="font-heading">{{restaurant.name}}</h1>
+         <div class="title">
+            <p>{{ restaurant.city }} {{ restaurant.location }}</p>
+         </div>
+      </div>
+      <span class="scroll">
+      <span class="wheel"></span>
+      </span>
+      <span class="shading gradient"></span>	
+   </section>
+   <div id="layout" class="wide">
+      <div id="container" class="color-content">
+         <main id="content">
+            <div class="post-41 page type-page status-publish hentry">
+               <section id="order-online" class="section-block">
+                  <div class="center">
+                     <div class="section-title v1">
+                        <p class="subtitle color-pr-tx">08:00 - 23:00</p>
+                        <h3 class="font-heading">Commander en ligne</h3>
+                     </div>
+                     <div id="categories-wrapper" class="items-swiper swiper swiper-container-horizontal">
+                        <ul id="categories-list" class="rect-item-list swiper-wrapper ">
+                           <li class="item">
+                              <div class="product-category product first">
+                                 <a href="product-category/salads.html">
+                                    <h2 class="font-heading color-tr">Salads</h2>
+                                    <img alt='' src='{{asset ('images/cat-2.jpg')}}' width='270' height='405'> 			<span class="gradient-to-top"></span>
+                                 </a>
+                              </div>
+                           </li>
+                           <li class="item">
+                              <div class="product-category product">
+                                 <a href="product-category/pizza.html">
+                                    <h2 class="font-heading color-tr">Pizza</h2>
+                                    <img alt='' src='{{asset ('images/cat-1.jpg')}}' width='270' height='405'> 			<span class="gradient-to-top"></span>
+                                 </a>
+                              </div>
+                           </li>
+                           <li class="item">
+                              <div class="product-category product last">
+                                 <a href="product-category/soups.html">
+                                    <h2 class="font-heading color-tr">Soups</h2>
+                                    <img alt='' src='{{asset ('images/cat-4.jpg')}}' width='270' height='405'> 			<span class="gradient-to-top"></span>
+                                 </a>
+                              </div>
+                           </li>
+                           <li class="item">
+                              <div class="product-category product first">
+                                 <a href="product-category/desserts.html">
+                                    <h2 class="font-heading color-tr">Desserts</h2>
+                                    <img alt='' src='{{asset ('images/cat-3.jpg')}}' width='270' height='405'> 			<span class="gradient-to-top"></span>
+                                 </a>
+                              </div>
+                           </li>
+                           <li class="item">
+                              <div class="product-category product">
+                                 <a href="product-category/drinks.html">
+                                    <h2 class="font-heading color-tr">Drinks</h2>
+                                    <img alt='' src='{{asset ('images/cat-2.jpg')}}' width='270' height='405'> 			<span class="gradient-to-top"></span>
+                                 </a>
+                              </div>
+                           </li>
+                        </ul>
+                        <div class="swiper-cat-prev fa fa-caret-left"></div>
+                        <div class="swiper-cat-next fa fa-caret-right"></div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </section>
+               <script>
+                  var swiper = new Swiper('#categories-wrapper',{	 
+                   cleanupStyles: true,
+                   slidesPerView: 4,
+                   spaceBetween: 30,
+                      navigation: {
+                  nextEl: '.swiper-cat-next',
+                  prevEl: '.swiper-cat-prev',    
+                  },
+                  pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                  },				
+                  slideClass: 'item',
+                  breakpoints: {
+                          1024: {
+                              slidesPerView: 4,
+                              spaceBetween: '3.333333%'
+                          },
+                          768: {
+                              slidesPerView: 3,
+                              spaceBetween: '3.333333%'
+                          },
+                          600: {
+                              slidesPerView: 2,
+                              spaceBetween: 15
+                          },
+                          270: {
+                              slidesPerView: 1,
+                              spaceBetween: 1
+                          }
+                      }	    
+                  });				
+               </script>
+               <section class="promo-slider">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide item dzsparallaxer auto-init height-is-based-on-content use-loading">
+                        <div class="divimage dzsparallaxer--target" style="background-image: url({{asset ('images/chef-service.jpg')}})"></div>
+                        <div class="center">
+                           <div class="table-cell">
+                              <div class="details color-content">
+                                 <h2 class="font-heading">Promo Action</h2>
+                                 <div class="content">
+                                    <p><b>Ut enim ad minim veniam</b>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide item dzsparallaxer auto-init height-is-based-on-content use-loading">
+                        <div class="divimage dzsparallaxer--target" style="background-image: url({{asset ('images/slide-1.jpg')}})"></div>
+                        <div class="center">
+                           <div class="table-cell">
+                              <div class="details color-content">
+                                 <h2 class="font-heading">Cristiano Restaurant</h2>
+                                 <div class="content">
+                                    <p><b>Ut enim ad minim veniam</b>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="slider-button-prev fa fa-caret-left"></div>
+                  <div class="slider-button-next fa fa-caret-right"></div>
+                  <div class="swiper-pagination"></div>
+               </section>
+               <section id="our-menu" class="section-block">
+                  <div class="center">
+                     <div class="section-title v1">
+                        <p class="subtitle color-pr-tx">Une selection de</p>
+                        <h3 class="font-heading">Notre Carte</h3>
+                     </div>
+                     <ul class="dishes-menu cols-2 margin-large large-imgs drop-style ">
+                        <li class="menu-item clearfix post-151 dishes_menu type-dishes_menu status-publish has-post-thumbnail hentry dishes_categories-pizza dishes_categories-salads">
+                           <div class="thumbnail">
+                              <span class="zoom-img" style="transform: rotate(-2deg)">
+                              <img width="370" height="247" src="{{asset ('images/product-3-105x105.jpg')}}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Pizza Margherita" />			</span>
+                              <img width="105" height="105" src="{{asset ('images/product-3-105x105.jpg')}}" class="attachment-cristiano_small_image size-cristiano_small_image wp-post-image" alt="Pizza Margherita" />		
+                           </div>
+                           <div class="description">
+                              <span class="dm-price font-title color-content color-pr-tx"><span class="currency">1000</span>FCFA</span>			
+                              <h2 class="color-content"><span class="title font-title">Tuna Niçoise</span></h2>
+                              <div class="dots">
+                                 <p>Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans, cherry tomatoes, black olives, peppers, new potatoes, egg, baby gem lettuce and red onion</p>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu-item clearfix post-72 dishes_menu type-dishes_menu status-publish has-post-thumbnail hentry dishes_categories-desserts dishes_categories-pizza dishes_categories-salads dishes_categories-soups">
+                           <div class="thumbnail">
+                              <span class="zoom-img" style="transform: rotate(1deg)">
+                              <img width="370" height="247" src="{{asset ('images/product-3-370x247.jpg')}}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Pizza Margherita" />			</span>
+                              <img width="105" height="105" src="{{asset ('images/product-3-105x105.jpg')}}" class="attachment-cristiano_small_image size-cristiano_small_image wp-post-image" alt="Pizza Margherita" />		
+                           </div>
+                           <div class="description">
+                              <span class="dm-price font-title color-content color-pr-tx"><span class="currency">$</span>13.95</span>			
+                              <h2 class="color-content"><span class="title font-title">Breton Fish Stew</span></h2>
+                              <div class="dots">
+                                 <p>Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette</p>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu-item clearfix post-75 dishes_menu type-dishes_menu status-publish has-post-thumbnail hentry dishes_categories-pizza dishes_categories-salads">
+                           <div class="thumbnail">
+                              <span class="zoom-img" style="transform: rotate(2deg)">
+                              <img width="370" height="247" src="{{asset ('images/product-2-370x247.jpg')}}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Spinach Soup" />			</span>
+                              <img width="105" height="105" src="{{asset ('images/product-2-105x105.jpg')}}" class="attachment-cristiano_small_image size-cristiano_small_image wp-post-image" alt="Spinach Soup" />		
+                           </div>
+                           <div class="description">
+                              <span class="dm-price font-title color-content color-pr-tx"><span class="currency">$</span>10.95</span>			
+                              <h2 class="color-content"><span class="title font-title">Chicken and Walnut Salad</span>			<span class="highlight-text color-pr-bg">Should to try</span>
+                              </h2>
+                              <div class="dots">
+                                 <p>Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing</p>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu-item clearfix post-76 dishes_menu type-dishes_menu status-publish has-post-thumbnail hentry dishes_categories-desserts dishes_categories-pizza dishes_categories-salads dishes_categories-soups">
+                           <div class="thumbnail">
+                              <span class="zoom-img" style="transform: rotate(-2deg)">
+                              <img width="370" height="247" src="{{asset ('images/product-1-370x247.jpg')}}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Cherry Pie" />			</span>
+                              <img width="105" height="105" src="{{asset ('images/product-1-105x105.jpg')}}" class="attachment-cristiano_small_image size-cristiano_small_image wp-post-image" alt="Cherry Pie" />		
+                           </div>
+                           <div class="description">
+                              <span class="dm-price font-title color-content color-pr-tx"><span class="currency">$</span>13.95</span>			
+                              <h2 class="color-content"><span class="title font-title">Escalope de Veau</span></h2>
+                              <div class="dots">
+                                 <p>Sautéed breaded veal escalope with watercress, lemon and veal jus.</p>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu-item clearfix post-74 dishes_menu type-dishes_menu status-publish has-post-thumbnail hentry dishes_categories-desserts dishes_categories-pizza dishes_categories-salads dishes_categories-soups">
+                           <div class="thumbnail">
+                              <span class="zoom-img" style="transform: rotate(-2deg)">
+                              <img width="370" height="247" src="{{asset ('images/product-4-370x247.jpg')}}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Apple Strudel" />			</span>
+                              <img width="105" height="105" src="{{asset ('images/product-4-105x105.jpg')}}" class="attachment-cristiano_small_image size-cristiano_small_image wp-post-image" alt="Apple Strudel" />		
+                           </div>
+                           <div class="description">
+                              <span class="dm-price font-title color-content color-pr-tx"><span class="currency">$</span>14.50</span>			
+                              <h2 class="color-content"><span class="title font-title">Roast Duck Breast</span>			<span class="highlight-text color-pr-bg">Exquisite taste</span>
+                              </h2>
+                              <div class="dots">
+                                 <p>Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce</p>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="menu-item clearfix post-68 dishes_menu type-dishes_menu status-publish has-post-thumbnail hentry dishes_categories-pizza">
+                           <div class="thumbnail">
+                              <span class="zoom-img" style="transform: rotate(-2deg)">
+                              <img width="370" height="247" src="{{asset ('images/product-4-370x247.jpg')}}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Apple Strudel" />			</span>
+                              <img width="105" height="105" src="{{asset ('images/product-4-105x105.jpg')}}" class="attachment-cristiano_small_image size-cristiano_small_image wp-post-image" alt="Apple Strudel" />		
+                           </div>
+                           <div class="description">
+                              <span class="dm-price font-title color-content color-pr-tx"><span class="currency">$</span>7.50/<span class="currency">$</span>12.00</span>			
+                              <h2 class="color-content"><span class="title font-title">Goats Cheese Salad</span></h2>
+                              <div class="dots">
+                                 <ul class="multiple-prices">
+                                    <li>
+                                       <span class="label">Small</span>
+                                       -
+                                       <span class="price color-pr-tx"><span class="currency">$</span>7.50</span>
+                                    </li>
+                                    <li>
+                                       <span class="label">Medium</span>
+                                       -
+                                       <span class="price color-pr-tx"><span class="currency">$</span>11.50</span>
+                                    </li>
+                                    <li>
+                                       <span class="label">Large</span>
+                                       -
+                                       <span class="price color-pr-tx"><span class="currency">$</span>12.00</span>
+                                    </li>
+                                 </ul>
+                                 <p>Warm goats cheese and roasted vegetable salad with black olive tapenade crostini</p>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                     <div class="view-full-menu">
+                        <a href="{{ url('menu')}}" class="btn btn-transparent btn-lg">Voir notre menu</a>
+                     </div>
+                  </div>
+               </section>
+               <section class="short-info  color-content-inverse" style=" ">
+                  <div class="center">
+                     <h2 class="font-heading">Appelez Nous: {{ restaurant.number }} </h2>
+                  </div>
+               </section>
+               <section id="most-popular" class="section-block">
+                  <div class="center">
+                     <div class="section-title v1">
+                        <p class="subtitle color-pr-tx">à déguster</p>
+                        <h3 class="font-heading">Recommendation du Chef</h3>
+                     </div>
+                     <ul id="product-list" class="cols-3 margin-large">
+                        <li>
+                           <div class="post-32 product type-product status-publish has-post-thumbnail product_cat-salads product_cat-pizza product_cat-desserts product_cat-drinks last instock featured shipping-taxable purchasable product-type-simple">
+                              <a class="image" href="product/apple-strudel.html">
+                                 <img width="420" height="280" src="{{asset ('images/product-4-420x280.jpg')}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Apple Strudel" />
+                                 <div class="star-rating"><span style="width:86.6%">Rated <strong class="rating">4.33</strong> out of 5</span></div>
+                                 <span class="product-price font-title"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>15.00</span></span>
+                              </a>
+                              <div class="description">
+                                 <h2 class="font-title">
+                                    <a href="product/apple-strudel.html">
+                                    Apple Strudel				</a>
+                                 </h2>
+                                 <p>Apples, Vanilla Ice Cream, Nuts</p>
+                                 <a href="add-to-cart_32_wordpress.html" data-quantity="1" class="btn-cart button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="32" data-product_sku="" aria-label="Add &ldquo;Apple Strudel&rdquo; to your cart" rel="nofollow">Ajouter au panier</a>		
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="post-22 product type-product status-publish has-post-thumbnail product_cat-salads product_cat-pizza product_cat-soups first instock featured shipping-taxable purchasable product-type-simple">
+                              <a class="image" href="product/caeser.html">
+                              <img width="420" height="280" src="{{asset ('images/product-5-420x280.jpg')}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Greek Salad" />
+                              <span class="product-price font-title"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>30.00</span></span>
+                              </a>
+                              <div class="description">
+                                 <h2 class="font-title">
+                                    <a href="product/caeser.html">Caeser Salad</a>
+                                 </h2>
+                                 <p>Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.</p>
+                                 <a href="add-to-cart_22_wordpress.html" data-quantity="1" class="btn-cart button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="22" data-product_sku="" aria-label="Add &ldquo;Caeser Salad&rdquo; to your cart" rel="nofollow">Ajouter au panier</a>		
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="post-62 product type-product status-publish has-post-thumbnail product_cat-salads product_cat-pizza product_cat-soups  instock featured shipping-taxable purchasable product-type-simple">
+                              <a class="image" href="product/cherry-pie.html">
+                                 <img width="420" height="280" src="{{asset ('images/product-1-420x280.jpg')}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Cherry Pie" />
+                                 <div class="star-rating"><span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5</span></div>
+                                 <span class="product-price font-title"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>15.00</span></span>
+                              </a>
+                              <div class="description">
+                                 <h2 class="font-title">
+                                    <a href="product/cherry-pie.html">
+                                    Cherry Pie				</a>
+                                 </h2>
+                                 <p>Cherries, Dough, White Sugar, Cheese, Vanilla Ice Cream</p>
+                                 <a href="add-to-cart_62_wordpress.html" data-quantity="1" class="btn-cart button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="62" data-product_sku="" aria-label="Add &ldquo;Cherry Pie&rdquo; to your cart" rel="nofollow">Ajouter au panier</a>		
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <section id="latest-news" class="has-bg color-tr">
+                  <div class="latest-news_list">
+                     <div class="section-title v1">
+                        <p class="subtitle color-pr-tx">Nos Evenements</p>
+                        <h3 class="font-heading"> Dernière News</h3>
+                     </div>
+                     <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                           <div class="item swiper-slide dzsparallaxer auto-init height-is-based-on-content  use-loading">
+                              <div class="divimage dzsparallaxer--target" style='background-image: url("{{asset ('images/news-1.jpg')}}")'></div>
+                              <div class="center">
+                                 <div class="cols-2 margin-large latest-news-inner">
+                                    <div>
+                                       <img width="675" height="439" src="{{asset ('images/news-1-675x439.jpg')}}" class="attachment-medium size-medium wp-post-image" alt="" />			
+                                    </div>
+                                    <div>
+                                       <time class="date pr-font" datetime="2018-04-03">April 3, 2018</time>
+                                       <h2 class="font-title"><a href="where-can-i-get-some.html">Where can I get some?</a></h2>
+                                       <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly&#8230;</p>
+                                       <a class="btn btn-transparent" href="where-can-i-get-some.html">Read More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <span class="alpha-gradient"></span>
+                           </div>
+                           <div class="item swiper-slide dzsparallaxer auto-init height-is-based-on-content  use-loading">
+                              <div class="divimage dzsparallaxer--target" style='background-image: url("{{asset ('images/restaurant.jpg')}}")'></div>
+                              <div class="center">
+                                 <div class="cols-2 margin-large latest-news-inner">
+                                    <div>
+                                       <img width="675" height="450" src="{{asset ('images/restaurant-675x450.jpg')}}" class="attachment-medium size-medium wp-post-image" alt="" />			
+                                    </div>
+                                    <div>
+                                       <time class="date pr-font" datetime="2018-03-06">March 6, 2018</time>
+                                       <h2 class="font-title"><a href="where-does-it-come-from.html">Where does it come from?</a></h2>
+                                       <p>Pellentesque nulla justo, auctor ac maximus sed, tempus sed nibh. Ut elit sapien, ornare et diam ac, efficitur luctus elit. Proin ut nulla consequat, elementum lacus eu, cursus ipsum. Fusce efficitur&#8230;</p>
+                                       <a class="btn btn-transparent" href="where-does-it-come-from.html">Read More</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <span class="alpha-gradient"></span>
+                           </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <span class="slider-button-prev fa fa-caret-left swiper-button-disabled"></span>
+                        <span class="slider-button-next fa fa-caret-right"></span>		
+                     </div>
+                  </div>
+               </section>
+{#                
+               <section id="testimonials-slider" class="section-block ">
+                  <div class="center">
+                     <div class="section-title v1">
+                        <p class="subtitle color-pr-tx">What Our Clients Say</p>
+                        <h3 class="font-heading"> Testimonials</h3>
+                     </div>
+                     <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="content">
+                                 <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                 <blockquote >
+                                    <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                                 </blockquote>
+                                 <h2 class="font-heading color-pr-tx">John Doe</h2>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="content">
+                                 <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                 <blockquote >
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                 </blockquote>
+                                 <h2 class="font-heading color-pr-tx">Jane Doe</h2>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="nav">
+                           <span class="prev fa fa-caret-left"></span>
+                           <span class="next fa fa-caret-right"></span>	
+                        </div>
+                     </div>
+                  </div>
+               </section> #}
+            </div>
+         </main>
+      </div>
+      <section class="dzsparallaxer dzsparallaxer-map auto-init use-loading">
+         <div class="dzsparallaxer--target">
+            <div id="map"></div>
+         </div>
+      </section>
+      <script type=text/javascript>		
+         jQuery(document).ready(function($) {
+         /* MAP
+            ========================================================================== */		
+         	var mapOptions = {
+         		center: new google.maps.LatLng({{ restaurant.latitude }}, {{ restaurant.longitude }}),
+         		zoom: 12,
+         		styles: cristiano_google_map_styles['default'],
+         		scrollwheel: false,
+         		mapTypeControl: false,
+         		zoomControlOptions: {
+                    	position: google.maps.ControlPosition.RIGHT_CENTER
+                  	},
+         	  	streetViewControlOptions: {
+                     position: google.maps.ControlPosition.RIGHT_CENTER
+                 },
+                 fullscreenControlOptions: {
+         	        position: google.maps.ControlPosition.RIGHT_CENTER	        
+                 }
+         	}
+         	var map = new google.maps.Map( document.getElementById('map'), mapOptions );
+         /* MARKER
+            ========================================================================== */		
+         	var markerOptions = {
+         		position: new google.maps.LatLng(40.715028, -74.017775),
+         		icon: '{{asset ('images/')}}http://cristianonew.ukrdevs.com/wp-content/themes/cristiano/assets/images/marker.png'
+         	}
+         	var marker = new google.maps.Marker(markerOptions);
+         		marker.setMap(map);
+         		google.maps.event.addDomListener(window, "resize", function() {
+         			var center = map.getCenter();
+         			google.maps.event.trigger(map, "resize");
+         			map.setCenter(center); 
+         		});	
+         /* INFO WINDOW
+            ========================================================================== */				
+         	var contentString = '<p><strong>Cristiano Restaurant</strong></p>\n<p>123 Main Street, Uni 21, New York City<br />\n+38 (012) 34 56 789</p>\n<p>Mon - Fri: 08:00 am - 10:00 pm<br />\nSat - Sun: 10:00 am - 11:00 pm</p>\n';
+                var infowindow = new google.maps.InfoWindow({
+                	content: contentString
+                });
+                marker.addListener('click', function() {
+                	infowindow.open(map, marker);
+                });				
+         });
+      </script>
+   </div>
+   <div class="overlay"></div>
+{% endblock %}

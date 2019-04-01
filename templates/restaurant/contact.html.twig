@@ -1,0 +1,208 @@
+{% extends 'base.html.twig' %}      
+{% block body %}
+
+      <div id="page-header" class="dzsparallaxer auto-init height-is-based-on-content use-loading">
+         <div class="divimage dzsparallaxer--target" style="background-image:url(wp-content/uploads/2018/05/header-bg.jpg)"></div>
+         <div class="container">
+            <div class="center">
+               <div class="heading-title">
+                  <h1 class="font-heading color-tr dynamic-shadow">Nous Contacter</h1>
+               </div>
+            </div>
+         </div>
+         <span class="shading gradient"></span>
+      </div>
+      <div id="layout" class="wide">
+         <div id="container">
+            <div class="center">
+               <main id="content">
+                  <div class="post-34 page type-page status-publish hentry">
+                     <section id="contact-details" class="section-block reset">
+                        <div class="center">
+                           <div class="section-title v1">
+                              <p class="subtitle color-pr-tx">Rendez-vous dans</p>
+                              <h3 class="font-heading">Notre Restaurant</h3>
+                           </div>
+                           <div class="cols-3 margin-large">
+                              <div>
+                                 <div class="box phones">
+                                    <h3 class="font-title">
+                                       Téléphone			
+                                    </h3>
+                                    <ul>
+                                       <li><a href="tel:+38 (012) 34 56 789">+38 (012) 34 56 789</a></li>
+                                    </ul>
+                                    <span class="color-pr-bg fa fa-phone"></span>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="box address">
+                                    <h3 class="font-title">
+                                       Addresse			
+                                    </h3>
+                                    <ul>
+                                       <li>
+                                          <a href="http://maps.google.com/?q=123 Main Street, Uni 21, New York City" target="_blank">123 Main Street, Uni 21, New York City</a>
+                                          <br>
+                                       </li>
+                                    </ul>
+                                    <span class="color-pr-bg fa fa-map-marker"></span>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="box hours">
+                                    <h3 class="font-title">
+                                       Heures d'ouverture			
+                                    </h3>
+                                    <ul>
+                                       <li class="hours">Lun - Vend: 08:00 - 22:00</li>
+                                       <li class="hours">Sam - Dim: 10:00 - 23:00</li>
+                                       <li class="hours"></li>
+                                       <li class="hours"></li>
+                                       <li class="hours"></li>
+                                       <li class="hours"></li>
+                                    </ul>
+                                    <span class="color-pr-bg fa fa-clock-o"></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                     <section id="contact-form" class="section-block ">
+                        <div class="center">
+                           <div class="section-title v1">
+                              <p class="subtitle color-pr-tx">Envoyer nous un message</p>
+                              <h3 class="font-heading">Formulaire Contact</h3>
+                           </div>
+                           <form id="ajax-contact" method="post" action="index.html">
+                              <div id="form-messages" class="submit-form-message"></div>
+                              <div class="form-items">
+                                 <div class="cols-3 margin-large">
+                                    <div class="form-item">
+                                       <label for="input-name">Votre Nom *</label>
+                                       <input type="text" id="input-name" name="name" class="required">
+                                    </div>
+                                    <div class="form-item">
+                                       <label for="input-email">Votre Email *</label>
+                                       <input type="email" id="input-email" name="email" class="required">
+                                    </div>
+                                    <div class="form-item">
+                                       <label for="input-phone">Votre Téléphone</label>
+                                       <input type="tel" id="input-phone" name="phone">
+                                    </div>
+                                 </div>
+                                 <div class="form-item">
+                                    <label for="textarea-message">Message *</label>
+                                    <textarea id="textarea-message" name="message" class="required"></textarea>
+                                 </div>
+                              </div>
+                              <div class="align-center-margin">
+                                 <button type="submit" class="btn-form btn btn-default btn-lg">Envoyer</button>
+                              </div>
+                           </form>
+                        </div>
+                     </section>
+                     <script>
+                        jQuery(document).ready(function($) {
+                        	jQuery('#ajax-contact').on('submit', function(e) {
+                        		e.preventDefault();
+                        		var formMessages = $('#form-messages');
+                        		var form = jQuery(this);				
+                        		function validate(){
+                        			form.find('[name]').each(function(index, value){
+                        				var that = $(this),
+                        				 	value = that.val(),
+                        					name = that.attr('name');		
+                        				if(that.hasClass('required')) {
+                        					if(value == '' || value.length < 3 && value.length > 50) {
+                        						that.addClass('error');
+                        					} else {
+                        						that.removeClass('error');
+                        					}
+                        					if(name == 'email') {
+                        						if(!value.match(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i)) {
+                        							that.addClass('error');
+                        						}
+                        					}
+                        				}
+                        			});
+                        			if(form.find('.required').hasClass('error')) {
+                        				return false;
+                        			}
+                        			return true;													 				 					
+                        		}
+                        		if(validate()) {
+                        			var data = {
+                        				action: 'contact_submit',
+                        				form_data: form.serialize()
+                        			}; 		
+                        			var test = jQuery.post( form.attr('action'), data, function(response) {
+                        			    // Make sure that the formMessages div has the 'success' class.
+                        			    $(formMessages).removeClass('error');
+                        			    $(formMessages).addClass('success');
+                        			    // Set the message text.
+                        			    $(formMessages).text(response);
+                        			    form[0].reset();
+                        			    //$('#reservation-submit').prop("disabled", true);
+                        			});
+                        		}														  			
+                        	});	
+                        });	
+                     </script>
+                  </div>
+               </main>
+            </div>
+         </div>
+         <section class="dzsparallaxer dzsparallaxer-map auto-init use-loading">
+            <div class="dzsparallaxer--target">
+               <div id="map"></div>
+            </div>
+         </section>
+         <script type=text/javascript>		
+            jQuery(document).ready(function($) {
+            /* MAP
+               ========================================================================== */		
+            	var mapOptions = {
+            		center: new google.maps.LatLng(40.715028, -74.017775),
+            		zoom: 12,
+            		styles: cristiano_google_map_styles['default'],
+            		scrollwheel: false,
+            		mapTypeControl: false,
+            		zoomControlOptions: {
+                       	position: google.maps.ControlPosition.RIGHT_CENTER
+                     	},
+            	  	streetViewControlOptions: {
+                        position: google.maps.ControlPosition.RIGHT_CENTER
+                    },
+                    fullscreenControlOptions: {
+            	        position: google.maps.ControlPosition.RIGHT_CENTER	        
+                    }
+            	}
+            	var map = new google.maps.Map( document.getElementById('map'), mapOptions );
+            /* MARKER
+               ========================================================================== */		
+            	var markerOptions = {
+            		position: new google.maps.LatLng(40.715028, -74.017775),
+            		icon: 'http://cristianonew.ukrdevs.com/wp-content/themes/cristiano/assets/images/marker.png'
+            	}
+            	var marker = new google.maps.Marker(markerOptions);
+            		marker.setMap(map);
+            		google.maps.event.addDomListener(window, "resize", function() {
+            			var center = map.getCenter();
+            			google.maps.event.trigger(map, "resize");
+            			map.setCenter(center); 
+            		});	
+            /* INFO WINDOW
+               ========================================================================== */				
+            	var contentString = '<p><strong>Cristiano Restaurant</strong></p>\n<p>123 Main Street, Uni 21, New York City<br />\n+38 (012) 34 56 789</p>\n<p>Mon - Fri: 08:00 am - 10:00 pm<br />\nSat - Sun: 10:00 am - 11:00 pm</p>\n';
+                   var infowindow = new google.maps.InfoWindow({
+                   	content: contentString
+                   });
+                   marker.addListener('click', function() {
+                   	infowindow.open(map, marker);
+                   });				
+            });
+         </script>
+      </div>
+      
+{% endblock %}

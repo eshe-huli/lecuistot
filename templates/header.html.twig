@@ -1,0 +1,96 @@
+{% block header %}
+   <body class="page-template page-template-page-full-width page-template-page-full-width-php page page-id-41 woocommerce-no-js no-sidebar">
+      <header class="header-container transparent-header sticky-tr">
+{% endblock %}
+         <div class="header-wrap">
+            <div id="top-bar">
+               <div class="center clearfix">
+                  <div class="social">
+                     <a class="fa fa-facebook" href="http://facebook.com/" target="blank"></a>
+                     <a class="fa fa-tripadvisor" href="https://www.tripadvisor.com/" target="blank"></a>
+                     <a class="fa fa-yelp" href="https://www.yelp.com/" target="blank"></a>
+                  </div>
+                  <ul id="menu-top-nav" class="additional-links">
+                     <li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242"><a href="contact-us.html">Nous Contactez</a></li>
+                  </ul>
+                  <ul class="header-info">
+                     <li><i class="fa fa-map-marker"></i>123 Main Street, Uni 21, New York City</li>
+                     <li><i class="fa fa-phone"></i><a href="tel:+225 00000000000{#{ restaurant.restaurantPhone}#}">+225 000000000 {#{ restaurant.restaurantPhone }#}</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="header header-v1">
+               <div class="flex-header center clearfix">
+                  <div id="nav-listener" class="nav-icon-left">
+                     <span></span>
+                     <span></span>
+                     <span></span>Contact
+                  </div>
+                  <div class="logo">
+                     <div class="text-logo">
+                        <a href="{{ url('home')}}">
+                        <span class="title font-heading">logo {#{restaurant.restaurantName}#}</span>
+                        {# <span class="description font-title">{{restaurant.restaurantName}}</span> #}
+                        </a>
+                     </div>
+                  </div>
+                  <nav id="nav">
+                     <div class="shopping-cart">
+                        <div class="cart-listener">
+                           <span class="cart-link">
+                           <i class="fa fa-shopping-bag"></i>
+                           <span class="count">0</span>
+                           </span>			
+                        </div>
+                        <div class="header-mini-cart">
+                           <p class="cart-links">
+                              <a href="{{ url('sign')}}"><i class="fa fa-user-circle-o"></i>Connexion</a>
+                              <a href="{{ url('cart')}}"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Panier</a>
+                           </p>
+                           {% if 1 == 1 %}
+                           <div class="widget woocommerce widget_shopping_cart">
+                              <div class="widget_shopping_cart_content">
+                                 <ul class="woocommerce-mini-cart cart_list product_list_widget ">
+                                    <li class="woocommerce-mini-cart-item mini_cart_item">
+                                       <a href="http://cristianonew.ukrdevs.com/cart/?remove_item=a4300b002bcfb71f291dac175d52df94&amp;_wpnonce=6c3beaf875" class="remove remove_from_cart_button" aria-label="Remove this item" data-product_id="909" data-cart_item_key="a4300b002bcfb71f291dac175d52df94" data-product_sku="">×</a>													<a href="http://cristianonew.ukrdevs.com/product/spinach-soup/">
+                                       <img width="420" height="280" src="http://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-420x280.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Spinach Soup">Spinach Soup							</a>
+                                       <span class="quantity">2 × <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>23.00</span></span>					
+                                    </li>
+                                    <li class="woocommerce-mini-cart-item mini_cart_item">
+                                       <a href="http://cristianonew.ukrdevs.com/cart/?remove_item=4e732ced3463d06de0ca9a15b6153677&amp;_wpnonce=6c3beaf875" class="remove remove_from_cart_button" aria-label="Remove this item" data-product_id="26" data-cart_item_key="4e732ced3463d06de0ca9a15b6153677" data-product_sku="">×</a>													<a href="http://cristianonew.ukrdevs.com/product/fish-parmentier/">
+                                       <img width="420" height="280" src="http://cristianonew.ukrdevs.com/wp-content/uploads/2016/07/product-7-420x280.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="">Fish Parmentier							</a>
+                                       <span class="quantity">1 × <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>21.00</span></span>					
+                                    </li>
+                                 </ul>
+                                 <p class="woocommerce-mini-cart__total total"><strong>Total:</strong> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>67.00</span></p>
+                                 <p class="woocommerce-mini-cart__buttons buttons"><a href="http://cristianonew.ukrdevs.com/cart/" class="button view-cart wc-forward">Voir le Panier cart</a><a href="http://cristianonew.ukrdevs.com/checkout/" class="button checkout wc-forward">Commander</a></p>
+                              </div>
+                           </div>
+                        </div>
+                        {% endif %}
+                     </div>
+                     <ul id="menu-navigation" class="primary-menu">
+                        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-42">
+                           <a href="{{ url('home')}}">Accueil</a>
+                        </li>
+                        <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
+                           <a href="{{ url('menu')}}">Notre Menu</a>                        
+                        </li>
+                        <li id="menu-item-384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-384">
+                           <a href="{{ url('card')}}">Notre Carte</a>                         
+                        </li>
+                        <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45">
+                           <a href="{{ url('event')}}">News & Evenements</a>
+                        </li>
+                        <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39">
+                           <a href="{{ url('booking')}}">Reservation</a>                       
+                        </li>
+                        <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36">
+                           <a href="{{ url('contact')}}">Contacts</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </header>

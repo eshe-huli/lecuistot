@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>{% block title %}{#{restaurant.restaurantName}#}{% endblock %}</title>
+      {% block stylesheets %}
+      {% endblock %}	
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name='robots' content='noindex,follow' />
+      <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+      <link rel='dns-prefetch' href='//s.w.org' />
+      <script type="text/javascript">
+         window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/cristianonew.ukrdevs.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+         !function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+      </script>
+      <style type="text/css">
+         img.wp-smiley,
+         img.emoji {
+         display: inline !important;
+         border: none !important;
+         box-shadow: none !important;
+         height: 1em !important;
+         width: 1em !important;
+         margin: 0 .07em !important;
+         vertical-align: -0.1em !important;
+         background: none !important;
+         padding: 0 !important;
+         }
+      </style>
+      <link rel='stylesheet' id='wp-block-library-css'  href='{{asset ('assets/css/style.min.css')}}' type='text/css' media='all' />
+      <link rel='stylesheet' id='wc-featured-product-editor-css'  href='{{asset ('assets/css/featured_product.css')}}' type='text/css' media='all' />
+      <link rel='stylesheet' id='wc-featured-product-editor-css'  href='{{asset ('assets/css/featured-product.css')}}' type='text/css' media='all' />
+      <style id='woocommerce-inline-inline-css' type='text/css'>
+         .woocommerce form .form-row .required { visibility: visible; }
+      </style>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link href='{{asset ('assets/css/font-awesome.min.css')}}' rel="stylesheet" type='text/css' media='all' >
+      <link href='{{asset ('assets/css/font-awesome.css')}}' rel="stylesheet" type='text/css' media='all' >
+      <link rel='stylesheet' id='cristiano-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lora%3A400%2C400i%2C700%7CCinzel&#038;subset=cyrillic%2Ccyrillic-ext%2Clatin-ext%2Cvietnamese&#038;ver=5.0.3' type='text/css' media='all' />
+      <link rel='stylesheet' id='cristiano-fontawesome-css'  href='{{asset ('assets/css/font-awesome.css')}}' type='text/css' media='all' />
+      <link rel='stylesheet' id='magnific-popup-css'  href='{{asset ('assets/css/magnific-popup.css')}}' type='text/css' media='all' />
+      <link rel='stylesheet' id='swiper-css'  href='{{asset ('assets/css/swiper.min.css')}}' type='text/css' media='all' />
+      <link rel='stylesheet' id='cristiano-grid-css'  href='{{asset ('assets/css/grid.css')}}' type='text/css' media='all' />
+      <link rel='stylesheet' id='cristiano-style-css'  href='{{asset ('assets/css/style.css')}}' type='text/css' media='all' />
+      <link rel='stylesheet' id='cristiano-wc-style-css'  href='{{asset ('assets/css/woocommerce.css')}}' type='text/css' media='all' />
+      <link rel='stylesheet' id='cristiano-rwd-css'  href='{{asset ('assets/css/rwd.css')}}' type='text/css' media='all' />
+      <link rel='stylesheet' id='dzsparallaxer-css'  href='{{asset ('assets/css/dzsparallaxer.css')}}' type='text/css' media='all' />
+      <script type='text/javascript' src='{{asset ('assets/js/jquery.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/jquery-migrate.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/jquery.magnific-popup.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets//js/swiper.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/script.js')}}'></script>
+      <noscript>
+         <style>.woocommerce-product-gallery{ opacity: 1 !important; }</style>
+      </noscript>
+      <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+      <script async src="www.googletagmanager.com/gtag/js_id_UA-51652220-7.js"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'UA-51652220-7');
+      </script>
+   </head>
+   {% include 'header.html.twig' %}
+
+      {% block body %}{% endblock %}
+
+      {% include 'footer.html.twig' %}
+
+      {% block javascripts %}
+      <script type="text/javascript">
+         var c = document.body.className;
+         c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+         document.body.className = c;
+      </script>
+      <script type='text/javascript' src='{{asset ('assets/js/jquery.blockUI.min.js')}}'></script>
+      <script type='text/javascript'>
+         /* <![CDATA[ */
+         var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"http:\/\/cristianonew.ukrdevs.com\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+         /* ]]> */
+      </script>
+      <script type='text/javascript' src='{{asset ('assets/js/add-to-cart.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/selectWoo.full.min.js')}}'></script>
+      <script type='text/javascript'>
+         /* <![CDATA[ */
+         var pwsL10n = {"unknown":"Password strength unknown","short":"Very weak","bad":"Weak","good":"Medium","strong":"Strong","mismatch":"Mismatch"};
+         /* ]]> */
+      </script>
+      <script type='text/javascript' src='{{asset ('assets/js/password-strength-meter.min.js')}}'></script>
+      <script type='text/javascript'>
+         /* <![CDATA[ */
+         var wc_password_strength_meter_params = {"min_password_strength":"3","i18n_password_error":"Please enter a stronger password.","i18n_password_hint":"Hint: The password should be at least twelve characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! \" ? $ % ^ & )."};
+         /* ]]> */
+      </script>
+      <script type='text/javascript' src='{{asset ('assets/js/frontend/password-strength-meter.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/js.cookie.min.js')}}'></script>
+      <script type='text/javascript'>
+         /* <![CDATA[ */
+         var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+         /* ]]> */
+      </script>
+      <script type='text/javascript' src='{{asset ('assets/js/woocommerce.min.js')}}'></script>
+      <script type='text/javascript'>
+         /* <![CDATA[ */
+         var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_3ddbab6e676df85dbaa75ee400f0652a","fragment_name":"wc_fragments_3ddbab6e676df85dbaa75ee400f0652a"};
+         /* ]]> */
+      </script>
+      <script type='text/javascript' src='{{asset ('assets/js/cart-fragments.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/dzsparallaxer.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/okshadow.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/core.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/datepicker.min.js')}}'></script>
+      <script type='text/javascript'>
+         jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+      </script>
+      <script type='text/javascript' src='{{asset ('assets/js/widget.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/tabs.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/comment-reply.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/wp-embed.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/dzsparallaxer.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/okshadow.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/core.min.js')}}'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/datepicker.min.js')}}'></script>
+      <script type='text/javascript'>
+         jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+      </script>
+      <script type='text/javascript' src='maps.googleapis.com/maps/api/js_key_AIzaSyB1cDSPOwgUjeOMUH3RsHPcBu2dWofw1Nw__038_ver_5.0.3.js'></script>
+      <script type='text/javascript' src='{{asset ('assets/js/google-maps-styles.js')}}'></script>
+      {% endblock %}
+   </body>
+</html>

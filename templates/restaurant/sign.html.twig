@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+<header class="header-container sticky">
+	<div class="header-wrap">
+{% endblock %}
+    {% block body %}
+      <div id="page-title" class="color-content">
+         <div class="center">
+            <h1 class="font-heading">My account</h1>
+         </div>
+      </div>
+      <div id="layout" class="wide">
+         <div id="container">
+            <div class="center">
+               <main id="content">
+                  <div class="post-7 page type-page status-publish hentry">
+                     <div class="woocommerce">
+                        <div class="woocommerce-notices-wrapper"></div>
+                        <div class="box-shadow" id="customer_login">
+                           <div class="cols-2 margin-large">
+                              <div>
+                                 <h2 class="font-title">Login</h2>
+                                 <form class="woocommerce-form woocommerce-form-login login" method="post">
+                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                       <label for="username">Username or email address <span class="required">*</span></label>
+                                       <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="" />				
+                                    </p>
+                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                       <label for="password">Password <span class="required">*</span></label>
+                                       <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
+                                    </p>
+                                    <p class="form-row">
+                                       <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="374814cc04" /><input type="hidden" name="_wp_http_referer" value="/my-account/" />					<button type="submit" class="woocommerce-Button button btn-primary" name="login" value="Login">Login</button>
+                                       <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
+                                       <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Remember me</span>
+                                       </label>
+                                    </p>
+                                    <p class="woocommerce-LostPassword lost_password">
+                                       <a href="my-account/lost-password.html">Lost your password?</a>
+                                    </p>
+                                 </form>
+                              </div>
+                              <div>
+                                 <h2 class="font-title">Register</h2>
+                                 <form method="post" class="register">
+                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                       <label for="reg_email">Email address <span class="required">*</span></label>
+                                       <input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="" />				
+                                    </p>
+                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                       <label for="reg_password">Password <span class="required">*</span></label>
+                                       <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
+                                    </p>
+                                    <div class="woocommerce-privacy-policy-text"></div>
+                                    <p class="woocommerce-FormRow form-row">
+                                       <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="b65aaeabc9" /><input type="hidden" name="_wp_http_referer" value="/my-account/" />					<button type="submit" class="woocommerce-Button button" name="register" value="Register">Register</button>
+                                    </p>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </main>
+            </div>
+         </div>
+      </div>
+{%  endblock %}
